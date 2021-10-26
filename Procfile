@@ -1,0 +1,1 @@
+web: gunicorn WeHateFreak.wsgi

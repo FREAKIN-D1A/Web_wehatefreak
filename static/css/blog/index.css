@@ -1,0 +1,25 @@
+
+
+
+
+
+.image-wrapper{
+    background-image: url('../../images/MAIN_PAGE_LOGO.png');
+    width: 497px;
+    height: 379px;
+    background-size: cover;
+    justify-self: center;
+    margin: 50px;
+}
+
+
+.description{
+    text-align: center;
+    color: var(--FRONT_COLOR);
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    justify-self: center;
+    margin: 50px;
+}
+

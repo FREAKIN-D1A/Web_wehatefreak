@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+
+
+{% load static %}
+{% load tz %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/blog/homepage.css' %}" >
+{% endblock link %}
+
+
+
+
+{% block top-btns %}
+    <a href="{% url 'blog:logout_view' %}"><button class="top-bar-btn">Logout</button></a>
+{% endblock top-btns %}
+
+
+{% block page%}
+
+<div class="new-post-wrapper">
+    <div class="post-header"><h2>New Post</h2></div>
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="content">
+            <textarea name="content" id="content"></textarea>
+        </div>
+        <div class="submission">
+            <button type="submit">Post Your Hate</button>
+        </div>
+    </form>
+
+</div>
+
+<div class="post-items-wrapper">
+
+    {% for post in posts %}
+    <div class="post-wrapper">
+        
+        <p class="post-content"> {{post.content|wordwrap:10}} </p>
+    
+        <h2 class="postinfo">
+            Posted by {{post.author.username}} on {{post.date_posted}} at {{post.time_posted}} UTC time
+        </h2>
+        
+    </div>
+    {%endfor%}
+
+</div>
+
+{% endblock page%}
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+
+:root{
+    --FRONT_COLOR : rgb(139,83,255);
+    --BACK_COLOR: black;
+}
+
+body{
+    background-color: var(--BACK_COLOR);
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+
+
+.container{
+    width:95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.top-bar-wrapper{
+
+    background-color: black;
+    display: flex ;
+    justify-content: space-between;
+    align-content:center;
+    /* border-bottom: 0.1px solid rgb(139,83,255); */
+    
+   
+}
+
+.top-bar-logo{
+    align-self: center;
+}
+.top-bar-btns{
+    align-self: center;
+}
+
+
+.top-bar-btn{
+    width: 100px;
+    height: 35px;
+    border-radius: 1rem;
+    border:none;
+    background-color: var(--FRONT_COLOR);
+    font-weight: 800;
+    margin-top: 10px ;
+    margin-right: 10px;
+}
+
+.top-bar-btn:hover{
+    transition-property: background-color, color, transform;
+    transition-duration: 500ms;
+    background-color: rgb(39,83,255);
+    color: white;
+    transform: scale(1.1);
+
+
+}
+
+
+
+
+.footer-wrapper{
+    text-align: center;
+    color: var(--FRONT_COLOR);
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.top-footer{
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+}
+
+
+.bottom-footer{
+    color: rgb(120,63,235);
+    
+}
+.bottom-footer a{
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--FRONT_COLOR);
+}
+.bottom-footer a:hover{
+    color: aliceblue;
+    font-weight: 500;
+}

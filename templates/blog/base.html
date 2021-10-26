@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog/base.css' %}">
+
+    {% block link %}
+   
+    {% endblock link %}
+
+    {%if title %}
+    <title> {{title}}</title>
+    {%else%}
+    <title>We Hate Freak</title>
+    {%endif%}
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="top-bar-wrapper">
+            <div class="top-bar-logo">
+                <img src="{% static 'images/LOGOHEAD_USE.png' %}" alt="images/LOGOHEAD_USE.png">
+                <img src="{% static 'images/LOGOTEXT_USE.png' %}" alt="images/LOGOTEXT_USE.png">
+            </div>
+            <div class="top-bar-btns">
+                <!-- <a href=""><button class="top-bar-btn">Login</button></a>
+                <a href=""><button class="top-bar-btn">Register</button></a> -->
+                {% block top-btns %}
+                {% endblock top-btns %}
+            </div>
+        </div>
+
+        {% block page%}
+
+        {% endblock page%}
+
+        <div class="footer-wrapper">
+            <div class="top-footer">
+                <p>
+                    Copyright &copy; FREAKISM
+                </p>
+                <p>
+                    All Rights Reserved
+                </p>
+            </div>
+
+            <div class="bottom-footer">
+                <p>Contact us</p>
+                <p><a href="https://www.facebook.com/dewan.mohammad.asad.d1a.freak">Dewan Mohammad Asad</a></p>
+                <p><a href="https://www.facebook.com/lameJokesprotidin/">Lame Jokes Protidin</a></p>
+                <p><a href="https://www.facebook.com/freakinbookreads">Freakin Book Reads</a></p>
+                
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

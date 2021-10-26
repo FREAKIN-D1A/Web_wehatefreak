@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/blog/index.css' %}" >
+{% endblock link %}
+
+
+{% block top-btns %}
+    <a href="{% url 'blog:login_view' %}"><button class="top-bar-btn">Login</button></a>
+    <a href="{% url 'blog:registration_view' %}"><button class="top-bar-btn">Register</button></a>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+{% endblock top-btns %}
+
+{% block page%}
+
+<div class="image-wrapper" >
+
+</div>
+<div>
+    <p style="color: crimson;">{{ logout }}</p>
+</div>
+
+<div class="description">
+    
+    <p>
+        Hello there. Do you hate Freak? Does the mere sight of him irritate you? You hate his guts, don't you ? Well in that case, good news for you. This is an online community only dedicated to show hate towards the freak. All you need to do is create an account(You dont even have to use your real name) and voila you can curse the freak as much as you want for free. Hating together makes you strong. Spread the hate !!
+    </p>
+
+</div>
+
+{% endblock page%}

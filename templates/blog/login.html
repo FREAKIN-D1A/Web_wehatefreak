@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/blog/login.css' %}" >
+{% endblock link %}
+
+{% block top-btns %}
+    <a href="{% url 'blog:login_view' %}"><button class="top-bar-btn">Login</button></a>
+    <a href="{% url 'blog:registration_view' %}"><button class="top-bar-btn">Register</button></a>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+{% endblock top-btns %}
+
+
+{% block page%}
+
+<div class="reg_page_content">
+    <p style="color: crimson;">{{ error }}</p>
+    <form  method="post">
+        {% csrf_token %}
+        <div class="form_wrapper">
+            <label for="username">
+                <h3>User Name:</h3>
+                <input class="box" id="username" type="text" name="username">
+            </label>
+            
+            <label for="password">
+               <h3> Password:</h3>
+                <input class="box" id="password" type="password" name="password">
+            </label>
+    
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <div class="send_to_login">
+        <h1>Don't have an account ?</h1>
+        <a href="{% url 'blog:registration_view' %}"><button >Registration</button></a>
+    </div>
+
+</div>
+
+{% endblock page%}
